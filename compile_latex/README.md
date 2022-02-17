@@ -90,5 +90,5 @@ If you're an Emacs user, you may want to add the following custom functions to y
 
 ## Known issues and missing features
 1. The code crashes in multi-folder projects with custom style files if you compile from a sub-folder. In these cases, always compile from the root folder. 
-2. For now only some biblatex citation styles are supported for automatic references grabbing. Using other citation style will not make the script crash but won't activate the reference grabber. For now, the script supports `cite`, `citep`, `citet`, `textcite`. 
+2. For now only some biblatex citation styles are supported for automatic references grabbing. Using other citation style will not make the script crash but won't activate the reference grabber. For now, the script supports `cite`, `citep`, `citet`, `textcite`. It does not support options on the citations (e.g. \cite[]{})
 3. Changes in your master bib file are not automatically reflected in the local bib file and requires you to delete the local bib to recreate it. 
