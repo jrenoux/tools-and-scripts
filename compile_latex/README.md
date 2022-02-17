@@ -1,7 +1,7 @@
 # LaTeX Custom Compiling with Automatic Reference Grabber
 
 This script provide a complete compilation line for your latex project with automatic referrences grabber. It performs the following operations in order: 
-1. Gather references from your text. More specifically : 
+1. (Biblatex only for now) Gather references from your text. More specifically : 
    - It finds all your citation commands in your tex file.
    - It fetches the corresponding reference from your master bib file, and append it in a local bib file for your tex project
    - If any references exist in your local bib file but not in your master file, these references will be stored in a separate file called `missing-from-master.bib`, situated in your project folder.
