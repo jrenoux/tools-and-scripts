@@ -2,10 +2,9 @@
 
 This script provide a complete compilation line for your latex project with automatic referrences grabber. It performs the following operations in order: 
 1. Gather references from your text. More specifically : 
-  a. It finds all your citation commands in your tex file.
-  b. It fetches the corresponding reference from your master bib file, and append it in a local bib file for your tex project
-  
-  c. If any references exist in your local bib file but not in your master file, these references will be stored in a separate file called `missing-from-master.bib`, situated in your project folder.
+   - It finds all your citation commands in your tex file.
+   - It fetches the corresponding reference from your master bib file, and append it in a local bib file for your tex project
+   - If any references exist in your local bib file but not in your master file, these references will be stored in a separate file called `missing-from-master.bib`, situated in your project folder.
 3. Compile your latex project according to the standard tex-bib-tex-tex compile chain. 
 4. Show you the remaining warning at the end of the compilation
 5. Grabs all instances of `TODO` in your tex file and display them as a summary at the end of the compilation. 
