@@ -10,7 +10,7 @@ path_to_current_folder="/path/to/current/folder"
 biblioProgram=biber
 errorMessage=""
 if [ "$#" -eq 0 ]; then	
-	echo "USAGE: latex_compile [*biber*/bibtex] filename"
+	echo "USAGE: ./compile_latex.sh [*biber*/bibtex] filename"
 	exit
 fi
 
