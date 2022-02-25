@@ -1,11 +1,10 @@
 # LaTeX Custom Compiling with Automatic Reference Grabber
 
 This script provide a complete compilation line for your latex project with automatic referrences grabber. It performs the following operations in order: 
-1. Gather references from your text. More specifically : 
-  a. It finds all your citation commands in your tex file.
-  b. It fetches the corresponding reference from your master bib file, and append it in a local bib file for your tex project
-  
-  c. If any references exist in your local bib file but not in your master file, these references will be stored in a separate file called `missing-from-master.bib`, situated in your project folder.
+1. (Biblatex only for now) Gather references from your text. More specifically : 
+   - It finds all your citation commands in your tex file.
+   - It fetches the corresponding reference from your master bib file, and append it in a local bib file for your tex project
+   - If any references exist in your local bib file but not in your master file, these references will be stored in a separate file called `missing-from-master.bib`, situated in your project folder.
 3. Compile your latex project according to the standard tex-bib-tex-tex compile chain. 
 4. Show you the remaining warning at the end of the compilation
 5. Grabs all instances of `TODO` in your tex file and display them as a summary at the end of the compilation. 
@@ -91,5 +90,5 @@ If you're an Emacs user, you may want to add the following custom functions to y
 
 ## Known issues and missing features
 1. The code crashes in multi-folder projects with custom style files if you compile from a sub-folder. In these cases, always compile from the root folder. 
-2. For now only some biblatex citation styles are supported for automatic references grabbing. Using other citation style will not make the script crash but won't activate the reference grabber. For now, the script supports `cite`, `citep`, `citet`, `textcite`. 
+2. For now only some biblatex citation styles are supported for automatic references grabbing. Using other citation style will not make the script crash but won't activate the reference grabber. For now, the script supports `cite`, `citep`, `citet`, `textcite`. It does not support options on the citations (e.g. `\cite[]{}`)
 3. Changes in your master bib file are not automatically reflected in the local bib file and requires you to delete the local bib to recreate it. 
