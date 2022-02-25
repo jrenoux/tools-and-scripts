@@ -27,8 +27,11 @@ filename="${basename##*/}"
 # get the master filename (if there is "TeX-master" property in the document)
 masterfilename=`python3 $path_to_current_folder/get-master-filename.py $filename` # Remember to change the path
 masterfilename="${masterfilename%.*}"
+rootdirectory=`python3 $path_to_current_folder/get-root-directory.py $filename` # Remember to change the path
 
+cd "$rootdirectory"
 
+echo "Script executed from: ${PWD}"
 
 #create build folder
 buildDir=$masterfilename.build
